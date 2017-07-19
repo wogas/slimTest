@@ -1,0 +1,44 @@
+body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif}
+
+#dashboard{
+    background-color: teal;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px
+}
+.search_style{margin-top: 5px}
+
+#login{background-color: orange;
+    color: white;
+    font-size: large;
+    float: right;
+ }
+
+.leftbar{
+    background-color: aliceblue;
+    border-right: 10px solid grey;
+    margin-top: 20px;
+}
+
+.leftbar > ul{
+    margin-top: 20px;
+    font-size : large;
+    list-style-type: none;
+}
+.leftbar > ul >ul{list-style-type: none}
+
+.middle{margin-top: 20px;
+        font-size: medium;
+ }
+
+.rightbar{margin-top:20px;
+
+}
+
+#hidden_login_form{display: none}
+
+#login{cursor: pointer}
+
+#sign-up-form{
+    display: none;
+}

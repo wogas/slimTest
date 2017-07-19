@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="lib/style.css?{{ 'now' | date('U', 'Europe/London')  }}">
+        <script src="lib/jquery-3.2.1.js"></script>
+        <title>{% block title %}{% endblock %} - MZB</title>
+    {% endblock %}
+</head>
+<body class="container">
+{# the first row #}
+  <div class="row">
+<div id="dashboard">
+    {% block dashboard %}some text{% endblock %}
+</div>
+  </div>
+  {# end first row #}
+  {# second row - 3 columns #}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-3 leftbar">
+            {% block leftbar %}{% endblock %}
+        </div>
+        <div class="col-sm-6 middle">
+            {% block middle %}{% endblock %}
+        </div>
+        <div class="col-sm-3 rightbar">
+            {% block rightbar %}{% endblock %}
+        </div>
+    </div>
+</div>
+  {# end second row#}
+<div id="footer">
+    {% block footer %}
+    <div id="footer-block"></div>
+    <script src="lib/myjs.js?{{ 'now' | date("U", 'Europe/London')  }}"></script>
+    {% endblock %}
+</div>
+</body>
+</html>

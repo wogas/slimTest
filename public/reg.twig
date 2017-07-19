@@ -1,0 +1,76 @@
+{% extends "base.twig" %}
+
+{% block title %} index {% endblock %}
+{% block head %}{{ parent() }}{% endblock %}
+{% block dashboard %}
+<div class="col-sm-4 col-xs-offset-4 search_style">
+    <label for="search" class="sr-only"></label>
+    <input type="text" name="search" placeholder="Search" class="form-control">
+
+</div>
+<div class="col-sm-4" style="margin-top: 15px">
+    <button>Search</button>
+    <span id="login">Login</span>
+</div>
+{% endblock %}
+
+{% block leftbar %}
+<ul>
+    <li>Friend Request</li>
+    <li>Profile</li>
+    <li>Settings</li>
+</ul>
+<ul>
+    <li>Explore</li>
+    <ul>
+        <li>people</li>
+        <li>pictures</li>
+        <li>video</li>
+        <li>group</li>
+    </ul>
+</ul>
+{% endblock%}
+
+{% block middle %}
+<div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    pellentesque eu, pretium quis, sem. Nulla consequat massa
+    quis enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+    consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+    viverra quis, feugiat a, tellus. Phasellus
+    viverra nulla ut metus varius laoreet.
+    Quisque rutrum. Aenean imperdiet. </div>
+<hr>
+
+<div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    pellentesque eu, pretium quis, sem. Nulla consequat massa
+    quis enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+    consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+    viverra quis, feugiat a, tellus. Phasellus
+    viverra nulla ut metus varius laoreet.
+    Quisque rutrum. Aenean imperdiet. </div>
+
+{% endblock %}
+
+{% block rightbar %}
+
+
+<div>
+    {{ result }}
+</div>
+
+
+{% endblock %}

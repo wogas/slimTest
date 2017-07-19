@@ -1,0 +1,4 @@
+{% macro input(name,id,placeholder, class, value, type, size ) %}
+    <input type="{{ type|default('text') }}" name="{{ name }}" value="{{ value|e }}" size="{{ size|default(20)
+    }}" placeholder="{{ placeholder }}" class="{{ class|default('form-control') }}" id="{{ id }}" />
+{% endmacro %}

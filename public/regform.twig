@@ -1,0 +1,114 @@
+{% extends "base.twig" %}
+
+{% block title %} index {% endblock %}
+{% block head %}{{ parent() }}{% endblock %}
+{% block dashboard %}
+    <div class="col-sm-4 col-xs-offset-4 search_style">
+        <label for="search" class="sr-only"></label>
+        <input type="text" name="search" placeholder="Search" class="form-control">
+
+    </div>
+    <div class="col-sm-4" style="margin-top: 15px">
+        <button>Search</button>
+
+    </div>
+{% endblock %}
+
+{% block leftbar %}
+    <ul>
+        <li>Friend Request</li>
+        <li>Profile</li>
+        <li>Settings</li>
+    </ul>
+    <ul>
+        <li>Explore</li>
+        <ul>
+            <li>people</li>
+            <li>pictures</li>
+            <li>video</li>
+            <li>group</li>
+        </ul>
+    </ul>
+{% endblock%}
+
+{% block middle %}
+    <div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+        viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet.
+        Quisque rutrum. Aenean imperdiet. </div>
+    <hr>
+
+    <div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+        viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet.
+        Quisque rutrum. Aenean imperdiet. </div>
+
+{% endblock %}
+
+{% block rightbar %}
+
+    <div>
+        {% import "forms.twig" as forms %}
+        <fieldset>
+            <legend>Sign Up</legend>
+            <form action="reg" method="post"  class="form-inline">
+                <div class="form-group">
+                    <label for="fname" class="sr-only">First Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div></div>
+                    {{ forms.input('fname', 'fname','First Name') }} <br><br>
+                    <div class="login_message" id="user_error"></div>
+
+                    <label for="lname" class="sr-only">Last Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div></div>
+                    {{ forms.input('lname', 'lname', 'Last Name') }} <br><br>
+
+                    <label for="username" class="sr-only"> Username</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div></div>
+                    {{ forms.input('username', 'username', 'Username') }} <br><br>
+                    <span id="username_error"></span>
+                    <label for="email" class="sr-only">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div></div>
+                    {{ forms.input('email', 'email','Email','','','email') }}<br><br>
+                    <span id="email_error"></span>
+
+
+
+                    <label for="pass" class="sr-only">Password</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div></div>
+                    {{ forms.input('pass', 'pass','Password','','','password') }}<br><br>
+
+                    <div class="input-group">
+                        {{ forms.input('submit','submit','','btn btn-success','submit','submit') }}
+                        <p id="any_error"></p>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+{% endblock %}

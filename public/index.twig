@@ -1,0 +1,99 @@
+{% extends "base.twig" %}
+
+{% block title %} index {% endblock %}
+{% block head %}{{ parent() }}{% endblock %}
+{% block dashboard %}
+<div class="col-sm-4 col-xs-offset-4 search_style">
+    <label for="search" class="sr-only"></label>
+    <input type="text" name="search" placeholder="Search" class="form-control">
+
+</div>
+    <div class="col-sm-4" style="margin-top: 15px">
+        <button>Search</button>
+        <span>{{ username }}</span>
+        <span id="login">Login</span>
+    </div>
+{% endblock %}
+
+{% block leftbar %}
+    <ul>
+        <li>Friend Request</li>
+        <li>Profile</li>
+        <li>Settings</li>
+    </ul>
+    <ul>
+        <li>Explore</li>
+        <ul>
+            <li>people</li>
+            <li>pictures</li>
+            <li>video</li>
+            <li>group</li>
+        </ul>
+    </ul>
+{% endblock%}
+
+{% block middle %}
+    <div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+        viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet.
+        Quisque rutrum. Aenean imperdiet. </div>
+    <hr>
+
+    <div class="middleContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+        Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+        viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet.
+        Quisque rutrum. Aenean imperdiet. </div>
+
+{% endblock %}
+
+{% block rightbar %}
+    <div id="hidden_login_form"><fieldset>
+            <legend>Login form</legend>
+            <form action="login" method="post" class="form-inline login_form" id="#myform">
+                <div class="form-group">
+                    <label class="sr-only" for="username">username</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">  <span class="glyphicon glyphicon-user" id="user_icon"></span></div></div>
+
+                    <input type="text" placeholder="username"  class="form-control" id="user" /><br>
+                    <div class="login_message" id="user_error"></div>
+                    <label class="sr-only" for="password">password</label><br>
+                    <div class="input-group">
+                        <div class="input-group-addon">  <span class="glyphicon glyphicon-lock" id="pass_icon"></span></div></div>
+                    <input type="password" placeholder="password" class="form-control" id="pass" />
+                    <div class="login_message" id="pass_error"></div>
+                    <br>
+                    <div class="input-group">
+                        <input type="submit" value="sign in" id="go">
+                    </div>
+                    <span><button class="btn btn-default" style="float:right" ><a href="register">Sign up</a></button></span>
+                    <br>
+                    <div>
+                        Forgot password?
+                    </div>
+                </div>
+            </form></fieldset>
+    </div>
+
+
+{% endblock %}
